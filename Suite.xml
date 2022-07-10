@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+        <!--https://www.tutorialspoint.com/testng/testng_parallelexecution.htm
+        https://stackoverflow.com/questions/31521466/testng-parallel-execution-with-dataprovider
+        good one : https://www.toolsqa.com/testng/testng-parallel-execution/?__cf_chl_managed_tk__=pmd_000db6b0c3a0b9556c1caeb45374dcd44cbbff09-1628307642-0-gqNtZGzNAuKjcnBszQq6
+        good one : https://www.toolsqa.com/testng/testng-parallel-execution/
+        -->
+<suite name = "Suite1">
+    <test name = "parameterTest" parallel = "methods"  thread-count="6" >
+
+        <parameter name = "myName" value="manisha"/>
+
+        <classes>
+            <class name = "TestNg.ParamTestWithDataProvider1" />
+        </classes>
+
+    </test>
+</suite>
