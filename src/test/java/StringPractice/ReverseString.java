@@ -1,5 +1,8 @@
 package StringPractice;
-// https://www.geeksforgeeks.org/reverse-a-string-in-java/
+/**
+ *    https://www.geeksforgeeks.org/reverse-a-string-in-java/
+  */
+
 public class ReverseString {
 
     public static void main(String[] args) {

@@ -13,7 +13,7 @@ public class RemoveVowelsFromAString {
         Character[] vowels = {'a', 'e', 'i', 'o', 'u','A','E','I','O','U'};
         List<Character> listOfVowels = Arrays.asList(vowels);
 
-        StringBuffer stringBuffer = new StringBuffer(str);
+        StringBuilder stringBuffer = new StringBuilder(str);
 
         System.out.println("stringBuffer : "+stringBuffer);
         for (int i = 0; i < stringBuffer.length(); i++) {

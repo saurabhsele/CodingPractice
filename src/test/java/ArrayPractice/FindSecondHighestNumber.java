@@ -13,9 +13,7 @@ public class FindSecondHighestNumber {
             System.out.print(" Invalid Input ");
             return;
         }
-
         for (int i = 0; i < n; i++) {
-
             if (arr[i] > first) {
                 second = first;
                 first = arr[i];

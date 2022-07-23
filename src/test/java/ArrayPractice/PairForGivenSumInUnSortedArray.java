@@ -5,15 +5,15 @@ package ArrayPractice;
 
 import java.util.HashSet;
 
-public class    PairForGivenSumInUnSortedArray {
+public class PairForGivenSumInUnSortedArray {
 
-    static int countPair(int[] arr, int sum){
+    static int countPair(int[] arr, int sum) {
         int count = 0;
         int n = arr.length;
         for (int i = 0; i < n; i++) {
-            for (int j = i+1; j < n; j++) {
-                if((arr[i]+arr[j]) == sum){
-                    System.out.println("Pair ("+arr[i]+", "+arr[j]+")");
+            for (int j = i + 1; j < n; j++) {
+                if ((arr[i] + arr[j]) == sum) {
+                    System.out.println("Pair (" + arr[i] + ", " + arr[j] + ")");
                     count++;
                 }
             }
@@ -21,9 +21,8 @@ public class    PairForGivenSumInUnSortedArray {
         return count;
     }
 
-    static int countPairHashSet(int[] arr, int sum){
+    static int countPairHashSet(int[] arr, int sum) {
         int count = 0;
-        int n = arr.length;
         HashSet<Integer> hashSet = new HashSet<>();
 
         for (int j : arr) {
@@ -38,10 +37,10 @@ public class    PairForGivenSumInUnSortedArray {
     }
 
     public static void main(String[] args) {
-        int[] array = {1,5,7,-1,5};
+        int[] array = {1, 5, 7, -1, 5};
         int sum = 6;
 
-        System.out.println(countPair(array,sum));
-        System.out.println(countPairHashSet(array,sum));
+        System.out.println(countPair(array, sum));
+        System.out.println(countPairHashSet(array, sum));
     }
 }

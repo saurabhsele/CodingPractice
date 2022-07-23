@@ -1,7 +1,7 @@
 package JavaPractice.Collection.JavaException.CustomeExceptions;
 
 public class InvalidAgeException extends Exception {
-    public InvalidAgeException(String message){
+    public InvalidAgeException(String message) {
         super(message);
     }
 }

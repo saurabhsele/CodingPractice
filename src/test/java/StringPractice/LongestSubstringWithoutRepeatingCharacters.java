@@ -1,39 +1,40 @@
 package StringPractice;
 
-import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
 /**
+ * https://www.geeksforgeeks.org/length-of-the-longest-substring-without-repeating-characters/?ref=lbp
  * https://www.youtube.com/watch?v=jHj13UHURr8
  */
 public class LongestSubstringWithoutRepeatingCharacters {
 
-    static int longestSubstringWithoutRepeatingCharacters(String strA) {
+    public static void longestString(String str){
+        String longestSubString = null;
+        int longestSubStringLength =0;
+        char[] charArray = str.toCharArray();
 
-        int n = strA.length();
-        char[] arr = strA.toCharArray();
-        HashMap<Integer, String> hashMap = new HashMap<>();
-        for (int i = 0; i < n; i++) {
-            String temp = "";
-            for (int j = i; j < n; j++) {
-                if (!(temp.contains(arr[j] + ""))) {
-                    temp = temp + arr[j];
-                    hashMap.put(temp.length(), temp);
-                }
+        Map<Character, Integer> map = new LinkedHashMap<>();
+        for (int i = 0; i < charArray.length; i++) {
+            char ch = charArray[i];
+            if(!map.containsKey(ch)){
+                map.put(ch,i); // storing char as key and index as value in the map.
+            }else { //
+                i = map.get(ch);
+                map.clear();
+            }
+            /**
+             * each time, checking the size of map with previous value
+              */
+              if(map.size() > longestSubStringLength){
+                longestSubString = map.keySet().toString();
+                longestSubStringLength = map.size();
             }
         }
-        System.out.print("hashMap " + hashMap);
-        int intTemp = 0;
-
-        for (Map.Entry<Integer, String> it : hashMap.entrySet()) {
-            if (it.getKey() > intTemp) {
-                intTemp = it.getKey();
-            }
-        }
-        System.out.println("intTemp : " + hashMap.get(intTemp));
-        return intTemp;
+        System.out.println(longestSubString);
+        System.out.println(longestSubStringLength);
     }
 
     static int countLongestSubstringWithoutRepeatingCharacters(String strA) {
@@ -61,12 +62,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return max;
     }
 
-
     public static void main(String[] args) {
-        String str = "abcdabcbbcdefg";
-        System.out.println(" ");
-        System.out.println(" tj : " + longestSubstringWithoutRepeatingCharacters(str));
-
-        System.out.println("count : "+countLongestSubstringWithoutRepeatingCharacters(str));
+        String str = "aa";
+        longestString(str);
+        countLongestSubstringWithoutRepeatingCharacters(str);
     }
 }

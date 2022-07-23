@@ -1,7 +1,6 @@
 package StringPractice;
 
 import java.util.TreeMap;
-import java.util.TreeSet;
 
 /**
  * https://www.geeksforgeeks.org/program-find-smallest-largest-word-string/
@@ -9,16 +8,21 @@ import java.util.TreeSet;
  */
 public class FindSmallestAndLargestWordInAString {
 
-    public void smallestAndLargerWord(String str){
+    public static void smallestAndLargerWord(String str){
         String[] stringArray = str.split(" ");
-        int temp=0; String strTemp="";
-        TreeMap<Integer, String> tm = new TreeMap<>();
+        TreeMap<String, Integer> tm = new TreeMap<>();
         for (String arr : stringArray) {
-           if(!tm.containsValue(arr)){
-             //  tm.put()
-           }else {
-
-           }
+              tm.put(arr, arr.length());
         }
+        String lmk = tm.firstKey();
+        String abc = tm.lastKey();
+
+        System.out.println("lmk : "+lmk);
+        System.out.println("abc : "+abc);
+    }
+
+    public static void main(String[] args) {
+        String abc = "GeeksforGeeks A Computer Science portal for Geeks";
+        smallestAndLargerWord(abc);
     }
 }

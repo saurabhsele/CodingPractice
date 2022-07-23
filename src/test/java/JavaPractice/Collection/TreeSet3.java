@@ -7,7 +7,7 @@ import java.util.TreeSet;
  */
 public class TreeSet3 {
     public static void main(String[] args) {
-        TreeSet treeSet = new TreeSet<Integer>();
+        TreeSet<Integer> treeSet = new TreeSet<>();
         treeSet.add(24);
         treeSet.add(-66);
         treeSet.add(-66);

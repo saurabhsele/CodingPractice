@@ -7,10 +7,12 @@ import org.testng.annotations.Test;
  *  // todo need to check with roopesh bhai
  */
 public class CheckIfAStringIsASubstringOfAnother {
+
     @Test
     public void test(){
-        System.out.println(subStringOfOther("abcd","cd"));
+        System.out.println(subStringOfOther("abcd","kl"));
     }
+
     public static int subStringOfOther(String str, String subString){
 
         for (int i = 0; i < str.length(); i++) {

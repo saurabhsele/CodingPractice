@@ -1,9 +1,9 @@
 package JavaPractice.Collection;
 
 import java.util.*;
-public class setExample{
-    public static void main(String[] args)
-    {
+
+public class setExample {
+    public static void main(String[] args) {
         // https://www.javatpoint.com/set-in-java
         // creating LinkedHashSet using the Set
         Set<String> data = new LinkedHashSet<>();

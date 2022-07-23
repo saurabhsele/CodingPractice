@@ -7,9 +7,7 @@ import java.util.StringTokenizer;
  */
 public class CountWordsInAGivenString {
 
-
     static int countWords(String str){
-
         if(str == null || str.isEmpty())
             return 0;
 

@@ -3,7 +3,6 @@ package ArrayPractice;
 /**
  * https://www.geeksforgeeks.org/rearrange-positive-and-negative-numbers/ todo
  * https://www.geeksforgeeks.org/segregating-negative-and-positive-maintaining-order-and-o1-space/ todo
- *
  */
 public class SegregateNegativeAndPositiveMaintainingOrder {
 
@@ -34,8 +33,8 @@ public class SegregateNegativeAndPositiveMaintainingOrder {
     }
 
     public static void main(String[] args) {
-        int[] arr = {12,11,-13,-5,6,-7,5,-3,-6};
-                //{3,8,-4,5,-6,5};
+        int[] arr = {12, 11, -13, -5, 6, -7, 5, -3, -6};
+        //{3,8,-4,5,-6,5};
         int le = arr.length;
 
     /*    int[] ar = segregateNegativeAndPositiveMaintainingOrder(arr, le);
@@ -45,21 +44,21 @@ public class SegregateNegativeAndPositiveMaintainingOrder {
 
         int[] arr2 = segregateNegativeAndPositiveMaintainingOrder1(arr, le);
         for (int ak : arr2) {
-            System.out.print(ak+" ");
+            System.out.print(ak + " ");
         }
     }
 
     static int[] segregateNegativeAndPositiveMaintainingOrder1(int[] arr, int n) {
         int start = 0;
         int end = n - 1;
-        int temp =0;
+        int temp = 0;
 
-        while (start<end){
-            if(arr[start] <0){
+        while (start < end) {
+            if (arr[start] < 0) {
                 start++;
-            }else if(arr[end]>0){
+            } else if (arr[end] > 0) {
                 end--;
-            }else {
+            } else {
                 temp = arr[start];
                 arr[start] = arr[end];
                 arr[end] = temp;

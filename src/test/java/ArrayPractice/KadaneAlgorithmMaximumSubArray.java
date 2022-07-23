@@ -6,20 +6,19 @@ package ArrayPractice;
  */
 public class KadaneAlgorithmMaximumSubArray {
 
-    public static int maxSubArray(int[] nums){
-       int bestSum = Integer.MIN_VALUE;
-       int current_sum = 0;
+    public static int maxSubArray(int[] nums) {
+        int bestSum = Integer.MIN_VALUE;
+        int current_sum = 0;
 
-        for (int i = 0; i < nums.length; i++) {
-            current_sum = Math.max(nums[i], current_sum+nums[i]);
-            bestSum = Math.max(bestSum,current_sum);
-
+        for (int elements : nums) {
+            current_sum = Math.max(elements, current_sum + elements);
+            bestSum = Math.max(bestSum, current_sum);
         }
         return bestSum;
     }
 
     public static void main(String[] args) {
-        int[] num ={-2,1,-3,4,-1,2,1,-5,4};
-        System.out.println("maxSubArray : "+maxSubArray(num));
+        int[] num = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        System.out.println("maxSubArray : " + maxSubArray(num));
     }
 }

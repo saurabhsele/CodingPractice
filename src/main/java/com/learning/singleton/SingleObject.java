@@ -1,4 +1,7 @@
 package com.learning.singleton;
+/**
+ * https://www.geeksforgeeks.org/singleton-design-pattern/
+  */
 
 public class SingleObject {
 

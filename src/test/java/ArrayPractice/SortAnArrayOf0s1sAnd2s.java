@@ -5,15 +5,15 @@ package ArrayPractice;
  */
 public class SortAnArrayOf0s1sAnd2s {
 
-    static int[] sortArr(int[] arr, int n){
+    static int[] sortArr(int[] arr, int n) {
         int count0 = 0;
         int count1 = 0;
         int count2 = 0;
         int i;
 
-        for ( i = 0; i < n; i++) {
+        for (i = 0; i < n; i++) {
 
-            switch (arr[i]){
+            switch (arr[i]) {
                 case 0:
                     count0++;
                     break;
@@ -26,28 +26,28 @@ public class SortAnArrayOf0s1sAnd2s {
             }
         }
         i = 0;
-        while (count0>0){
+        while (count0 > 0) {
             arr[i++] = 0;
             count0--;
         }
-        while (count1>0){
+        while (count1 > 0) {
             arr[i++] = 1;
             count1--;
         }
-        while (count2>0){
+        while (count2 > 0) {
             arr[i++] = 2;
             count2--;
         }
 
         return arr;
     }
-    public static void main(String[] args)
-    {
-        int[] arr = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 };
+
+    public static void main(String[] args) {
+        int[] arr = {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1};
         int n = arr.length;
         sortArr(arr, n);
         for (int rf : arr) {
-            System.out.print(rf+" ");
+            System.out.print(rf + " ");
         }
     }
 }

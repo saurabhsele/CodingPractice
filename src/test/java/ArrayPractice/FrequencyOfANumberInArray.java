@@ -7,19 +7,19 @@ import java.util.HashMap;
  */
 public class FrequencyOfANumberInArray {
 
-   static HashMap<Integer, Integer> hashMap = new HashMap<>();
+    static HashMap<Integer, Integer> hashMap = new HashMap<>();
 
-   static void countFreq(int[] arr){
+    static void countFreq(int[] arr) {
 
-       for (int j : arr) {
-           if (hashMap.containsKey(j))
-               hashMap.put(j, hashMap.get(j) + 1);
-           else
-               hashMap.put(j, 1);
-       }
+        for (int j : arr) {
+            if (hashMap.containsKey(j))
+                hashMap.put(j, hashMap.get(j) + 1);
+            else
+                hashMap.put(j, 1);
+        }
     }
 
-    static int query(int x){
+    static int query(int x) {
         if (hashMap.containsKey(x))
             return hashMap.get(x);
         return 0;
@@ -28,6 +28,6 @@ public class FrequencyOfANumberInArray {
     public static void main(String[] args) {
         int[] a = {1, 3, 2, 4, 2, 1};
         countFreq(a);
-        System.out.println("out Put : "+query(2));
+        System.out.println("out Put : " + query(2));
     }
 }

@@ -1,9 +1,8 @@
 package ArrayPractice;
 
 /***
- *
- find pairs with given sum in a sorted array
- Condition : Array elements are distinct and in sorted order
+ * find pairs with given sum in a sorted array
+ * *** Condition : Array elements are distinct and in sorted order
  */
 public class PairForGivenSumInSortedArray {
 
@@ -25,7 +24,7 @@ public class PairForGivenSumInSortedArray {
                 count++;
             }
         }
-        System.out.println("count : "+count);
+        System.out.println("count : " + count);
     }
 
     public static void main(String[] args) {
